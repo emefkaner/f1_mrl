@@ -435,6 +435,91 @@ const RACES = [
       { driver: "perez",       dnf: true, gap: "Mechanisches Versagen, Runde 23" },
     ]
   },
+  {
+    round: 8, gp: "Madrid", circuit: "Madring", date: "2026-09-14", laps: "—",
+    /* Sprintwochenende. Der Sprint (20:32) kommt vollständig aus der Spiel-CSV.
+       Die Rennen-CSV (21:44) enthielt nur die Sprint-Wertung noch einmal —
+       ein Fehler des Spiels, Sprint und Rennen liefen in derselben
+       Spielsitzung. Das Vorfallprotokoll des Rennens darin ist echt und
+       steht unten. Die Zielreihenfolge des Rennens gibt emefka von Hand
+       durch; bis dahin bleibt results leer (Sainz Runde 8 und Gasly Runde 9
+       sind laut Protokoll ausgefallen).
+       Spieler:in Ferrari = mauramir, Spieler:in Audi = l1chtfloh (bestätigt). */
+    note: "Rennergebnis wird nachgetragen",
+    sprint: {
+      laps: 10,
+      fastestLap: "verstappen",
+      results: [
+        { driver: "alonso",      gap: "16:30.854" },
+        { driver: "piastri",     gap: "+0.317" },
+        { driver: "verstappen",  gap: "+1.981" },
+        { driver: "perez",       gap: "+2.733" },
+        { driver: "norris",      gap: "+5.663" },
+        { driver: "bottas",      gap: "+6.299" },
+        { driver: "bearman",     gap: "+8.409" },
+        { driver: "russell",     gap: "+8.767" },
+        { driver: "hadjar",      gap: "+20.696" },
+        { driver: "colapinto",   gap: "+22.993" },
+        { driver: "albon",       gap: "+23.251" },
+        { driver: "ocon",        gap: "+25.019" },
+        { driver: "antonelli",   gap: "+28.204" },
+        { driver: "sainz",       gap: "+34.839" },
+        { driver: "lindblad",    gap: "+35.168" },
+        { driver: "hamilton",    gap: "+35.483" },
+        { driver: "lawson",      gap: "+35.860" },
+        { driver: "mauramir",    gap: "+37.259" },
+        { driver: "emefka",      gap: "+50.121" },
+        { driver: "l1chtfloh",   gap: "+59.410" },
+        { driver: "gasly",       dnf: true, gap: "Mechanisches Versagen, Runde 7" },
+        { driver: "stroll",      dnf: true, gap: "Mechanisches Versagen, Runde 3" },
+      ]
+    },
+    penalties: [
+      { t: "0:35.983",  lap: 1,  driver: "l1chtfloh", what: "Mehrere Warnungen",            pen: "3 Sek." },
+      { t: "6:50.021",  lap: 5,  driver: "emefka",    what: "Kurve abgekürzt",              pen: "3 Sek." },
+      { t: "13:04.931", lap: 8,  driver: "sainz",     what: "Mechanisches Versagen",        pen: "DNF" },
+      { t: "13:38.181", lap: 8,  driver: "mauramir",  what: "Mehrere Warnungen",            pen: "3 Sek." },
+      { t: "14:07.371", lap: 9,  driver: "gasly",     what: "Mechanisches Versagen",        pen: "DNF" },
+      { t: "24:33.851", lap: 11, driver: "l1chtfloh", what: "Schwere Kollision mit Russell", pen: "10 Sek. Zeitstrafe" },
+      { t: "24:51.070", lap: 11, driver: "l1chtfloh", what: "Mehrere Warnungen",            pen: "3 Sek." },
+      { t: "37:47.586", lap: 19, driver: "emefka",    what: "Mehrere Warnungen",            pen: "3 Sek." },
+      { t: "47:16.428", lap: 24, driver: "emefka",    what: "Mehrere Warnungen",            pen: "3 Sek." },
+      { t: "54:09.333", lap: 28, driver: "l1chtfloh", what: "Mehrere Warnungen",            pen: "3 Sek." },
+    ],
+    results: []
+  },
+  {
+    round: 9, gp: "Spielberg", circuit: "Red Bull Ring, umgekehrte Richtung", date: "2026-09-14", laps: 18,
+    fastestLap: "emefka",
+    /* Erstes Rennen mit UDP-Mitschnitt (tools/udp_mitschnitt.py): Runden,
+       Strecke und Sessiontyp stammen aus der Telemetrie, die Zeiten decken
+       sich mit der CSV von 22:36. L1chtfloh war nicht dabei. Im Protokoll
+       stehen nur Kollisionswarnungen, keine Strafen.
+       Spieler:in Ferrari = mauramir (bestätigt).                          */
+    results: [
+      { driver: "mauramir",    gap: "21:33.758" },
+      { driver: "russell",     gap: "+13.879" },
+      { driver: "bottas",      gap: "+18.540" },
+      { driver: "emefka",      gap: "+19.646" },
+      { driver: "verstappen",  gap: "+21.863" },
+      { driver: "albon",       gap: "+25.826" },
+      { driver: "antonelli",   gap: "+27.684" },
+      { driver: "norris",      gap: "+29.128" },
+      { driver: "perez",       gap: "+29.459" },
+      { driver: "sainz",       gap: "+31.941" },
+      { driver: "alonso",      gap: "+33.180" },
+      { driver: "lindblad",    gap: "+38.379" },
+      { driver: "piastri",     gap: "+39.043" },
+      { driver: "hamilton",    gap: "+40.054" },
+      { driver: "lawson",      gap: "+41.017" },
+      { driver: "ocon",        gap: "+41.796" },
+      { driver: "hadjar",      gap: "+42.957" },
+      { driver: "colapinto",   gap: "+43.564" },
+      { driver: "bearman",     gap: "+43.961" },
+      { driver: "stroll",      gap: "+49.887" },
+      { driver: "gasly",       gap: "+50.277" },
+    ]
+  },
 ];
 
 /* Navigation ganz oben. Neue Einträge einfach anhängen — Reihenfolge hier
