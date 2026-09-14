@@ -436,16 +436,19 @@ const RACES = [
     ]
   },
   {
-    round: 8, gp: "Madrid", circuit: "Madring", date: "2026-09-14", laps: "—",
+    round: 8, gp: "Madrid", circuit: "Madring", date: "2026-09-14", laps: 29,
     /* Sprintwochenende. Der Sprint (20:32) kommt vollständig aus der Spiel-CSV.
        Die Rennen-CSV (21:44) enthielt nur die Sprint-Wertung noch einmal —
        ein Fehler des Spiels, Sprint und Rennen liefen in derselben
        Spielsitzung. Das Vorfallprotokoll des Rennens darin ist echt und
-       steht unten. Die Zielreihenfolge des Rennens gibt emefka von Hand
-       durch; bis dahin bleibt results leer (Sainz Runde 8 und Gasly Runde 9
-       sind laut Protokoll ausgefallen).
-       Spieler:in Ferrari = mauramir, Spieler:in Audi = l1chtfloh (bestätigt). */
-    note: "Rennergebnis wird nachgetragen",
+       steht unten.
+       Die Zielreihenfolge des Rennens ist deshalb von einem Screenshot der
+       Zeitentafel in Runde 29/29 abgelesen, wie in Silverstone. Deren Spalte
+       war "Intervall", die gap-Werte hier sind daraus aufsummierte Rückstände
+       auf den Sieger. Siegerzeit und schnellste Runde standen nicht darauf.
+       Gasly und Sainz DNF deckt sich mit dem Protokoll.
+       Spieler:in Ferrari = mauramir, Spieler:in Audi = l1chtfloh (bestätigt,
+       auf dem Screenshot auch namentlich).                                 */
     sprint: {
       laps: 10,
       fastestLap: "verstappen",
@@ -486,7 +489,30 @@ const RACES = [
       { t: "47:16.428", lap: 24, driver: "emefka",    what: "Mehrere Warnungen",            pen: "3 Sek." },
       { t: "54:09.333", lap: 28, driver: "l1chtfloh", what: "Mehrere Warnungen",            pen: "3 Sek." },
     ],
-    results: []
+    results: [
+      { driver: "verstappen",  gap: "—" },
+      { driver: "alonso",      gap: "+10.661" },
+      { driver: "norris",      gap: "+14.317" },
+      { driver: "emefka",      gap: "+27.617" },
+      { driver: "mauramir",    gap: "+29.124" },
+      { driver: "antonelli",   gap: "+33.388" },
+      { driver: "bottas",      gap: "+35.800" },
+      { driver: "albon",       gap: "+36.359" },
+      { driver: "colapinto",   gap: "+37.995" },
+      { driver: "hamilton",    gap: "+38.435" },
+      { driver: "lindblad",    gap: "+40.181" },
+      { driver: "ocon",        gap: "+40.655" },
+      { driver: "piastri",     gap: "+41.092" },
+      { driver: "russell",     gap: "+41.500" },
+      { driver: "stroll",      gap: "+46.152" },
+      { driver: "hadjar",      gap: "+46.583" },
+      { driver: "perez",       gap: "+46.928" },
+      { driver: "lawson",      gap: "+50.193" },
+      { driver: "bearman",     gap: "+51.879" },
+      { driver: "l1chtfloh",   gap: "+1:17.262" },
+      { driver: "gasly",       dnf: true, gap: "Mechanisches Versagen, Runde 9" },
+      { driver: "sainz",       dnf: true, gap: "Mechanisches Versagen, Runde 8" },
+    ]
   },
   {
     round: 9, gp: "Spielberg", circuit: "Red Bull Ring, umgekehrte Richtung", date: "2026-09-14", laps: 18,
