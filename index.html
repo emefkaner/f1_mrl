@@ -546,6 +546,76 @@ const RACES = [
       { driver: "gasly",       gap: "+50.277" },
     ]
   },
+  {
+    round: 10, gp: "Baku", circuit: "Baku City Circuit", date: "2026-10-12", laps: 26,
+    fastestLap: "emefka",
+    /* Sprintwochenende, beide Sessions mit eigener CSV (22:36 und 23:47) —
+       der Fehler aus Madrid ist diesmal nicht aufgetreten, die Wertungen
+       unterscheiden sich. Strecke aus dem Replay-Dateinamen.
+       laps ist geschätzt: 2841,8 s Gesamtzeit bei rund 1:49 Schnitt ergibt 26
+       Runden im Rennen und 9 im Sprint.
+       Spieler:in Ferrari = mauramir (bestätigt). L1chtfloh war nicht dabei,
+       deshalb fährt Hülkenberg das zweite Audi.                            */
+    sprint: {
+      laps: 9,
+      fastestLap: "mauramir",
+      results: [
+        { driver: "mauramir",    gap: "16:22.816" },
+        { driver: "russell",     gap: "+2.038" },
+        { driver: "bottas",      gap: "+4.475" },
+        { driver: "piastri",     gap: "+5.233" },
+        { driver: "alonso",      gap: "+6.020" },
+        { driver: "antonelli",   gap: "+6.918" },
+        { driver: "sainz",       gap: "+7.647" },
+        { driver: "ocon",        gap: "+7.839" },
+        { driver: "huelkenberg", gap: "+9.631" },
+        { driver: "albon",       gap: "+10.074" },
+        { driver: "verstappen",  gap: "+10.608" },
+        { driver: "hamilton",    gap: "+11.194" },
+        { driver: "norris",      gap: "+11.697" },
+        { driver: "perez",       gap: "+12.027" },
+        { driver: "lindblad",    gap: "+14.424" },
+        { driver: "lawson",      gap: "+16.537" },
+        { driver: "hadjar",      gap: "+16.635" },
+        { driver: "bearman",     gap: "+18.410" },
+        { driver: "gasly",       gap: "+20.330" },
+        { driver: "stroll",      gap: "+22.550" },
+        { driver: "colapinto",   gap: "+25.484" },
+        { driver: "emefka",      gap: "+30.929" },
+      ]
+    },
+    penalties: [
+      { t: "2:02.240",  lap: 2,  driver: "emefka",   what: "Schwere Kollision mit Hamilton", pen: "10 Sek. Zeitstrafe",
+        note: "im Sprint" },
+      { t: "16:43.756", lap: 9,  driver: "emefka",   what: "Nicht erfüllte Strafe",          pen: "10 Sek.",
+        note: "im Sprint" },
+      { t: "23:33.421", lap: 13, driver: "lindblad", what: "Mechanisches Versagen",          pen: "DNF" },
+    ],
+    results: [
+      { driver: "emefka",      gap: "47:21.848" },
+      { driver: "mauramir",    gap: "+12.094" },
+      { driver: "russell",     gap: "+35.149" },
+      { driver: "verstappen",  gap: "+42.560" },
+      { driver: "perez",       gap: "+45.648" },
+      { driver: "bottas",      gap: "+50.038" },
+      { driver: "piastri",     gap: "+51.231" },
+      { driver: "hamilton",    gap: "+52.810" },
+      { driver: "alonso",      gap: "+54.479" },
+      { driver: "gasly",       gap: "+54.553" },
+      { driver: "norris",      gap: "+55.137" },
+      { driver: "albon",       gap: "+57.172" },
+      { driver: "antonelli",   gap: "+57.616" },
+      { driver: "huelkenberg", gap: "+1:00.287" },
+      { driver: "sainz",       gap: "+1:00.659" },
+      { driver: "ocon",        gap: "+1:03.318" },
+      { driver: "lawson",      gap: "+1:03.833" },
+      { driver: "hadjar",      gap: "+1:09.098" },
+      { driver: "stroll",      gap: "+1:14.505" },
+      { driver: "colapinto",   gap: "+1:16.189" },
+      { driver: "bearman",     gap: "+1:20.397" },
+      { driver: "lindblad",    dnf: true, gap: "Mechanisches Versagen, Runde 13" },
+    ]
+  },
 ];
 
 /* Navigation ganz oben. Neue Einträge einfach anhängen — Reihenfolge hier
