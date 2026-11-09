@@ -616,6 +616,80 @@ const RACES = [
       { driver: "lindblad",    dnf: true, gap: "Mechanisches Versagen, Runde 13" },
     ]
   },
+  {
+    round: 11, gp: "Brasilien", circuit: "Autódromo José Carlos Pace", date: "2026-11-09", laps: 25,
+    fastestLap: "emefka",
+    /* Strecke aus dem Replay-Dateinamen, laps geschätzt: 1877,6 s Gesamtzeit
+       bei rund 1:15 Schnitt ergibt 25 Runden.
+       emefka hat den Sprint ausgelassen — dort fuhr Bortoleto das zweite
+       Audi — und ist im Rennen von P22 auf P2 gefahren, mit der schnellsten
+       Runde.
+       Spieler:in Ferrari = mauramir, Spieler:in Haas = l1chtfloh (bestätigt).
+       L1chtfloh fuhr hier ausnahmsweise Haas, deshalb steht team in seiner
+       Zeile — sonst liefe sein Ergebnis in die Audi-Wertung.
+       Keine penalties: das Protokoll enthielt nur Warnungen.
+
+       Nicht enthalten ist das Spa-Rennen vom 30.10.2026 (CSV liegt im
+       Archiv). Das war ein reines Sechs-Mann-Rennen ohne KI mit einem
+       Gastfahrer; emefka hat entschieden, dass es nicht zur Meisterschaft
+       zählt.                                                               */
+    /* Für den Sprint gibt es keine CSV, nur zwei Fotos der Ergebnistafel.
+       Die zeigt Platzierung und Sprintpunkte, aber keine Zeiten — deshalb
+       steht hier nur die Reihenfolge. Die Punktespalte des Spiels (8-7-6-5-
+       4-3-2-1) deckt sich mit SPRINT_POINTS. emefka fehlt, er ist den Sprint
+       nicht mitgefahren.                                                    */
+    sprint: {
+      note: "nur Platzierungen, keine Zeiten",
+      results: [
+        { driver: "mauramir" },
+        { driver: "piastri" },
+        { driver: "verstappen" },
+        { driver: "alonso" },
+        { driver: "russell" },
+        { driver: "norris" },
+        { driver: "gasly" },
+        { driver: "bottas" },
+        { driver: "lindblad" },
+        { driver: "huelkenberg" },
+        { driver: "bearman" },
+        { driver: "perez" },
+        { driver: "hamilton" },
+        { driver: "sainz" },
+        { driver: "lawson" },
+        { driver: "antonelli" },
+        { driver: "bortoleto" },
+        { driver: "stroll" },
+        { driver: "colapinto" },
+        { driver: "hadjar" },
+        { driver: "albon" },
+        { driver: "l1chtfloh", team: "Haas" },
+      ]
+    },
+    results: [
+      { driver: "mauramir",    gap: "31:17.620" },
+      { driver: "emefka",      gap: "+20.030" },
+      { driver: "verstappen",  gap: "+27.569" },
+      { driver: "alonso",      gap: "+29.343" },
+      { driver: "norris",      gap: "+36.632" },
+      { driver: "russell",     gap: "+38.990" },
+      { driver: "piastri",     gap: "+40.891" },
+      { driver: "gasly",       gap: "+41.377" },
+      { driver: "hamilton",    gap: "+41.774" },
+      { driver: "antonelli",   gap: "+44.832" },
+      { driver: "lawson",      gap: "+45.790" },
+      { driver: "sainz",       gap: "+48.750" },
+      { driver: "albon",       gap: "+49.696" },
+      { driver: "huelkenberg", gap: "+50.949" },
+      { driver: "perez",       gap: "+51.470" },
+      { driver: "lindblad",    gap: "+53.644" },
+      { driver: "hadjar",      gap: "+54.428" },
+      { driver: "stroll",      gap: "+55.465" },
+      { driver: "colapinto",   gap: "+1:00.188" },
+      { driver: "bearman",     gap: "+1:00.710" },
+      { driver: "bottas",      gap: "+1:05.598" },
+      { driver: "l1chtfloh",   gap: "+1 Runde", team: "Haas" },
+    ]
+  },
 ];
 
 /* Navigation ganz oben. Neue Einträge einfach anhängen — Reihenfolge hier
