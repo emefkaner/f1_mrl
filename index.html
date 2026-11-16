@@ -690,6 +690,75 @@ const RACES = [
       { driver: "l1chtfloh",   gap: "+1 Runde", team: "Haas" },
     ]
   },
+  {
+    round: 12, gp: "Mexiko-Stadt", circuit: "Autódromo Hermanos Rodríguez", date: "2026-11-16", laps: 25,
+    fastestLap: "emefka",
+    /* Sprintwochenende, beide Sessions mit eigener CSV (20:28 und 21:16).
+       Strecke von emefka genannt, es lag kein Replay vor. laps geschätzt:
+       2057,7 s Gesamtzeit bei rund 1:22 Schnitt ergibt 25 Runden im Rennen,
+       646,0 s bei rund 1:21 ergeben 8 im Sprint.
+       emefka hat den Sprint von Startplatz 1 gewonnen und das Rennen von
+       Startplatz 20 aus — beides mit der schnellsten Runde.
+       Spieler:in Ferrari = mauramir, Spieler:in Williams = l1chtfloh
+       (bestätigt). L1chtfloh fuhr hier Williams, deshalb steht team in
+       seinen Zeilen.                                                       */
+    sprint: {
+      laps: 8,
+      fastestLap: "emefka",
+      results: [
+        { driver: "emefka",      gap: "10:46.013" },
+        { driver: "mauramir",    gap: "+9.461" },
+        { driver: "l1chtfloh",   gap: "+31.021", team: "Williams" },
+        { driver: "alonso",      gap: "+36.649" },
+        { driver: "russell",     gap: "+39.893" },
+        { driver: "verstappen",  gap: "+40.245" },
+        { driver: "norris",      gap: "+40.888" },
+        { driver: "piastri",     gap: "+41.311" },
+        { driver: "ocon",        gap: "+45.902" },
+        { driver: "antonelli",   gap: "+46.537" },
+        { driver: "perez",       gap: "+47.000" },
+        { driver: "bottas",      gap: "+48.177" },
+        { driver: "lindblad",    gap: "+49.398" },
+        { driver: "huelkenberg", gap: "+49.748" },
+        { driver: "hamilton",    gap: "+49.887" },
+        { driver: "sainz",       gap: "+50.403" },
+        { driver: "gasly",       gap: "+51.638" },
+        { driver: "lawson",      gap: "+53.759" },
+        { driver: "bearman",     gap: "+54.012" },
+        { driver: "hadjar",      gap: "+54.202" },
+        { driver: "colapinto",   gap: "+55.817" },
+        { driver: "stroll",      gap: "+55.823" },
+      ]
+    },
+    penalties: [
+      { t: "3:16.162",  lap: 3,  driver: "bottas", what: "Mechanisches Versagen", pen: "DNF" },
+      { t: "22:20.691", lap: 16, driver: "gasly",  what: "Mechanisches Versagen", pen: "DNF" },
+    ],
+    results: [
+      { driver: "emefka",      gap: "34:17.664" },
+      { driver: "alonso",      gap: "+25.648" },
+      { driver: "verstappen",  gap: "+26.147" },
+      { driver: "perez",       gap: "+29.308" },
+      { driver: "norris",      gap: "+31.883" },
+      { driver: "russell",     gap: "+34.156" },
+      { driver: "piastri",     gap: "+37.115" },
+      { driver: "huelkenberg", gap: "+40.027" },
+      { driver: "sainz",       gap: "+40.518" },
+      { driver: "antonelli",   gap: "+41.139" },
+      { driver: "l1chtfloh",   gap: "+43.896", team: "Williams" },
+      { driver: "mauramir",    gap: "+44.708" },
+      { driver: "hamilton",    gap: "+44.993" },
+      { driver: "hadjar",      gap: "+53.401" },
+      { driver: "lawson",      gap: "+55.663" },
+      { driver: "colapinto",   gap: "+57.743" },
+      { driver: "bearman",     gap: "+59.701" },
+      { driver: "stroll",      gap: "+1:01.863" },
+      { driver: "ocon",        gap: "+1:02.353" },
+      { driver: "lindblad",    gap: "+1:06.861" },
+      { driver: "gasly",       dnf: true, gap: "Mechanisches Versagen, Runde 16" },
+      { driver: "bottas",      dnf: true, gap: "Mechanisches Versagen, Runde 3" },
+    ]
+  },
 ];
 
 /* Navigation ganz oben. Neue Einträge einfach anhängen — Reihenfolge hier
